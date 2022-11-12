@@ -18,9 +18,9 @@ const generate = document.getElementById("generate");
 generate.addEventListener("click", async () => {
   //restor the value of the input box to a varible
 
-  let yourFeeling = document.getElementById("feelings").value;
-  let zipCode = document.getElementById("zip").value;
+  let zip = document.getElementById("zip").value;
+  let feelings = document.getElementById("feelings").value;
 
-  const response = await fetch(apiCall);
+  const response = await fetch(apiCall).then(res => res.json());
   console.log(response);
 });
