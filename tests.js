@@ -15,16 +15,21 @@ app.listen(80, function () {
 */
 
 /*==========================*/
-console.log(`test `);
+
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
+
+app.use(cors());
 app.get('/', (req, res) => {
-  console.log(`here line 23 `);
-  res.sendStatus(200);
+console.log(`here line 23 `);
+res.sendStatus(200);
 });
 
 app.listen(3050);
+
 
 /*
 const bodyParser = require("body-parser");
