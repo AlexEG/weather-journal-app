@@ -15,14 +15,26 @@ app.listen(80, function () {
 */
 
 /*==========================*/
+projectData = {};
 
 const express = require("express");
+
 const app = express();
+
 const cors = require("cors");
+
 const bodyParser = require("body-parser");
 
-
 app.use(cors());
+
+// -----------------------------------//
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
+
+
+
 app.get('/', (req, res) => {
 console.log(`here line 23 `);
 res.sendStatus(200);
