@@ -21,7 +21,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   console.log(`here line 23 `);
-  res.send( `hi!!! this is render in the home page` );
+  res.sendStatus(200);
 });
 
 app.listen(3050);
@@ -40,3 +40,4 @@ app.use(cors());
 app.use(express.static("website"));
 
 */
+
