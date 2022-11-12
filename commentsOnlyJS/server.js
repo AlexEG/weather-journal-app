@@ -1,7 +1,7 @@
 // Setup empty JS object to act as endpoint for all routes [DONE]
 // Express to run server and routes [DONE]
 
-// Start up an instance of app
+// Start up an instance of app [DONE]
 
 /* Dependencies */
 /* Middleware*/
