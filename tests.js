@@ -24,11 +24,7 @@ app.get("/all", getInfo);
 
 
 
-  app.get('/', (req, res) => {
-  console.log(`here line 23 `);
-  res.sendStatus(200);
-  
-});
+
 
 
 
