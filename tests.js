@@ -21,7 +21,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   console.log(`here line 23 `);
-  res.send( `hi!!!` );
+  res.send( `hi!!! this is render in the home page` );
 });
 
 app.listen(3050);
