@@ -21,6 +21,6 @@ generate.addEventListener("click", async () => {
   let zip = document.getElementById("zip").value;
   let feelings = document.getElementById("feelings").value;
 
-  const response = await fetch(apiCall).then(res => res.json());
+  const response = await fetch(apiCall).then((res) => res.json());
   console.log(response);
 });
