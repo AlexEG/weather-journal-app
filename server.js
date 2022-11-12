@@ -9,8 +9,6 @@ const express = require("express");
 // Start up an instance of app
 const app = express();
 
-//Create a server running on the port 
-app.listen(3000)
 
 /* Middleware*/
 const bodyParser = require("body-parser");
@@ -23,17 +21,20 @@ const cors = require("cors");
 app.use(cors());
 // Initialize the main project folder
 app.use(express.static("website"));
-
-// ==============local server==============
+/*========================================*/
+app.get("/all", (req, res) => {
+    res.status(200).send(projectData)});
+/*==============local server==============*/
+//Create a server running on the port
 const port = 8000;
-//callback function with arrwo function
+//callback function with arrow function
 //Callback to debug the code
 const server = app.listen(port, () => {
-    console.log(`running on localhost: ${port}`);
-  });
-  
-  function startServer() {
-    server;
-  }
+console.log(`running on localhost: ${port}`);
+});
+
+function startServer() {
+server;
+}
 // Setup Server
 startServer();
