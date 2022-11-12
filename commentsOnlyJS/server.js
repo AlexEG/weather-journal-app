@@ -6,8 +6,8 @@
 /* Dependencies */
 /* Middleware*/
 
-//Here we are configuring express to use body-parser as middle-ware.
-// Cors for cross origin allowance
+//Here we are configuring express to use body-parser as middle-ware.[DONE]
+// Cors for cross origin allowance[DONE]
 
 // Initialize the main project folder
 
