@@ -24,4 +24,16 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static("website"));
 
+// ==============local server==============
+const port = 8000;
+//callback function with arrwo function
+//Callback to debug the code
+const server = app.listen(port, () => {
+    console.log(`running on localhost: ${port}`);
+  });
+  
+  function startServer() {
+    server;
+  }
 // Setup Server
+startServer();
