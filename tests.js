@@ -1,8 +1,8 @@
-//instal cors sorce-- https://www.npmjs.com/package/cors
+//
 
-var express = require("express");
-var cors = require("cors");
-var app = express();
+let express = require("express");
+let cors = require("cors");
+let app = express();
 
 app.use(cors());
 

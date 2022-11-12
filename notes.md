@@ -44,4 +44,9 @@
   +===============================SOURCES=======================================+
                                  
   [Cors for cross origin allowance]
-  https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#:~:text=Cross%2DOrigin%20Resource%20Sharing%20(CORS)%20is%20an%20HTTP%2D,browser%20should%20permit%20loading%20resources.
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#:~:text=Cross%2DOrigin%20Resource%20Sharing%20(CORS)%20is%20an%20HTTP%2D,browser%20should%20permit%20loading%20resources.
+
+  [instal cors sorce]
+    https://www.npmjs.com/package/cors
+
+    
