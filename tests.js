@@ -1,5 +1,4 @@
-//
-
+/*
 let express = require("express");
 let cors = require("cors");
 let app = express();
@@ -13,5 +12,31 @@ app.get("/products/:id", function (req, res, next) {
 app.listen(80, function () {
   console.log("CORS-enabled web server listening on port 80");
 });
+*/
 
 /*==========================*/
+console.log(`test `);
+const express = require("express");
+const app = express();
+
+app.get('/', (req, res) => {
+  console.log(`here line 23 `);
+  res.send( `hi!!!` );
+});
+
+app.listen(3050);
+
+/*
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
+
+const cors = require("cors");
+
+app.use(cors());
+
+app.use(express.static("website"));
+
+*/
