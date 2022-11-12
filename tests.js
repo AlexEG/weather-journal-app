@@ -1,4 +1,5 @@
 
+
 /*==========================*/
 
 projectData = {};
@@ -7,7 +8,7 @@ const express = require("express");
 
 const app = express();
 
-app.listen(3000)
+app.listen(3050)
 
 /********Middleware*******/
 const bodyParser = require("body-parser");
@@ -23,11 +24,15 @@ app.use(cors());
 
 app.use(express.static("website"));
 
+let getInfo = (req, res) => res.status(200).send(projectData);
+
+app.get('/', (req, res) => {
+  console.log(`here line 23 `);
+  res.sendStatus(200);
+  
+});
+
 
 
 /*==========================*/
 
-app.get('/', (req, res) => {
-console.log(`here line 23 `);
-res.sendStatus(200);
-});
