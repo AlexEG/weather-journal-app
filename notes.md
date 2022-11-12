@@ -40,3 +40,8 @@
   - temperature
   - date
   - user response
+
+  +===============================SOURCES=======================================+
+                                 
+  [Cors for cross origin allowance]
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#:~:text=Cross%2DOrigin%20Resource%20Sharing%20(CORS)%20is%20an%20HTTP%2D,browser%20should%20permit%20loading%20resources.
