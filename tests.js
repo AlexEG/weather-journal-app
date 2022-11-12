@@ -24,7 +24,7 @@ app.use(cors());
 app.use(express.static("website"));
 
 
-// Setup Server
+
 /*==========================*/
 
 app.get('/', (req, res) => {
