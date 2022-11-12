@@ -21,7 +21,7 @@ const cors = require("cors");
 app.use(cors());
 // Initialize the main project folder
 app.use(express.static("website"));
-/*========================================*/
+/*===================GET=====================*/
 app.get("/all", (req, res) => {
     res.status(200).send(projectData)});
 /*==============local server==============*/
