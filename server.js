@@ -37,5 +37,5 @@ const port = 8088;
 //callback function with arrow function
 app.listen(port, () => {
   //Callback to debug the code
-  console.log(`running on localhost: ${port}`);
+  console.log(`server is running on localhost: ${port}`);
 });

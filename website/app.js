@@ -72,7 +72,7 @@ const fixData = async (data) => {
   }
 };
 /*===============incoming Data==================*/
-const retrieveData = async (url) => {
+const incomingData = async (url) => {
   const response = await fetch(url);
   try {
     const result = await response.json();
@@ -121,7 +121,7 @@ generate.addEventListener("click", (event) => {
     projectData(data).then((data) => {
       projectData(data).then((info) => {
         postData("/add", info).then((data) => {
-            retrieveData("/all").then((data) => {
+            incomingData("/all").then((data) => {
             updateUI(data);
           });
         });
