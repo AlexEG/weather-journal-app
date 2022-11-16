@@ -38,10 +38,10 @@ generate.addEventListener("click", (event)=>{
     });
   
 /*===============get-data==================*/
-const getData = async (url) =>{
+const getData = async (openWeathe) =>{
     try {   
         // waiting for the data from fetching the URL
-           const response = await fetch(url);
+           const response = await fetch(openWeathe);
            // store the value of response in (result) in json file
             const result = await response.json();
             if(result.cod != 200){return result;}
