@@ -52,7 +52,7 @@ const getData = async (openWeathe) => {
   }
 };
 
-/*========================================*/
+/*=================fixData=======================*/
 const fixData = async (data) => {
   try {
     if (data.message) {
@@ -71,6 +71,24 @@ const fixData = async (data) => {
     console.error(error);
   }
 };
+/*===============Post Data==================*/
+const postData = async (url='', data={})=>{
+    const response = await fetch(url, {
+        method: 'POST',
+        credentials:"same-origin",
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(data)
+    });
+    try {
+        const result = await response.json();
+        return result;
+    }catch (err) {
+        console.error(err);
+    }
+};
+
 /*===============dynamically UI update==================*/
 const updateUI = async (info) => {
   if (!info.message) {
@@ -92,5 +110,6 @@ generate.addEventListener("click", (event) => {
   const apiURL = `${baseURI}${zip.value}${key}`;
 
   getData(apiURL).then((data) => {
-
+    projectData(data);
+       
 });
