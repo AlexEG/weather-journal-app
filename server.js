@@ -31,13 +31,11 @@ app.get("/all", async (req, res) => {
   }
 });
 /*==============local server==============*/
-//Create a server running on the port
-//callback function with arrow function
-//Callback to debug the code
-
 // Setup Server
-
+//Create a server running on the port 8000
 const port = 8000;
+//callback function with arrow function
 app.listen(port, () => {
+  //Callback to debug the code
   console.log(`running on localhost: ${port}`);
 });
