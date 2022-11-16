@@ -1,5 +1,7 @@
 body{
-    background-image: url('https://source.unsplash.com/1600x900/?weather');
+    background-color: #1d4049;
+    /* for getting random weather background  from unsplash API */
+    /* background-image: url('https://source.unsplash.com/1600x900/?weather'); */
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -15,14 +17,14 @@ body{
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
-
+.entry{
+    background: rgba(59, 74, 107, .4);
+}
+/*
 .holder{
 
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
 
 #entryHolder{
 
@@ -46,6 +48,7 @@ body{
 .title{
 
 }
+*/
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
