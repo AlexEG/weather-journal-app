@@ -72,44 +72,41 @@ const fixData = async (data) => {
   }
 };
 /*===============incoming Data==================*/
-const incoming = async (url) => {
-    const response = await fetch(url);
-    try{
-        const result = await response.json();
-        return result;
-    }catch (err) {
-        console.error(err);
-    }
- };
+const retrieveData = async (url) => {
+  const response = await fetch(url);
+  try {
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 /*===============Post Data==================*/
-const postData = async (url='', data={})=>{
-    const response = await fetch(url, {
-        method: 'POST',
-        credentials:"same-origin",
-        headers: {
-            'Content-Type': 'application/json'
-          },
-        body: JSON.stringify(data)
-    });
-    try {
-        const result = await response.json();
-        return result;
-    }catch (err) {
-        console.error(err);
-    }
+const postData = async (url = "", data = {}) => {
+  const response = await fetch(url, {
+    method: "POST",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  try {
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 /*===============dynamically UI update==================*/
 const updateUI = async (info) => {
-  if (!info.message) {
+  
     temp.innerHTML = `${info.temp}&#176`;
     content.innerHTML = info.content ? info.content : "What do you feel";
     date.innerHTML = info.date;
-    message.innerHTML = "";
-  } else {
-    console.log(`error line `);
-  }
+   
 };
 /*===============generate-button==================*/
 //store the button in a varible so I can add to it an addEventListener on click
@@ -121,6 +118,14 @@ generate.addEventListener("click", (event) => {
   const apiURL = `${baseURI}${zip.value}${key}`;
 
   getData(apiURL).then((data) => {
-    projectData(data);
-       
+    projectData(data).then((data) => {
+      projectData(data).then((info) => {
+        postData("/add", info).then((data) => {
+            retrieveData("/all").then((data) => {
+            updateUI(data);
+          });
+        });
+      });
+    });
+  });
 });
