@@ -33,7 +33,7 @@ app.get("/all", async (req, res) => {
 /*==============local server==============*/
 // Setup Server
 //Create a server running on the port 8000
-const port = 8000;
+const port = 8088;
 //callback function with arrow function
 app.listen(port, () => {
   //Callback to debug the code

@@ -1,25 +1,45 @@
-/* Global Variables */
 
-/* save the API key to a varible here and 
-add units metric to convert kelvin units to celsius */
-const APIKey = "127963487c6c5c760c53d9f994bc64f1&units=metric";
-const apiCall = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${APIKey}`;
-
+/*add units metric to convert kelvin units to celsius */
 // Create a new date instance dynamically with JS
+const date = document.getElementById('date');
 let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
 
 
 /*============GET Request=====BUTTON========*/
+const feelings = document.getElementById('feelings');
+const temp = document.getElementById('temp');
+const zip = document.getElementById('zip');
+
+
+/*===============key URL==================*/
+const defaultApiCall = "https://api.openweathermap.org/data/2.5/weather?zip={zip code}&appid={API key}";
+const baseURI = "https://api.openweathermap.org/data/2.5/weather?zip=";
+/* save the API key to a varible here and */
+const key = "&appid=127963487c6c5c760c53d9f994bc64f1&units=imperial";
+
+
+/*===============generate button==================*/
 //stor the button in a varible so I can add to it an addEventListener on click
 const generate = document.getElementById('generate');
-const zip = document.getElementById('zip');
-const key = "&appid=127963487c6c5c760c53d9f994bc64f1&units=imperial";
-const baseURI = "https://api.openweathermap.org/data/2.5/weather?zip=";
-const feelings = document.getElementById('feelings');
-
-/*===============openweathermapp==================*/
 //addEventListener on click
+generate.addEventListener("click", (event)=>{
+    event.preventDefault();
+});
 
-//restor the value of the input box to a varible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
