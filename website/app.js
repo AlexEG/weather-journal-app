@@ -71,6 +71,17 @@ const fixData = async (data) => {
     console.error(error);
   }
 };
+/*===============incoming Data==================*/
+const incoming = async (url) => {
+    const response = await fetch(url);
+    try{
+        const result = await response.json();
+        return result;
+    }catch (err) {
+        console.error(err);
+    }
+ };
+
 /*===============Post Data==================*/
 const postData = async (url='', data={})=>{
     const response = await fetch(url, {
