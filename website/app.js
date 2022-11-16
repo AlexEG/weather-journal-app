@@ -20,15 +20,30 @@ const baseURI = "https://api.openweathermap.org/data/2.5/weather?zip=";
 const key = "&appid=127963487c6c5c760c53d9f994bc64f1&units=imperial";
 
 
+
+
+/*===============get data==================*/
+    const getData = async (url) =>{
+        try {   
+            // waiting for the data from fetching the URL
+               const response = await fetch(url);
+               // store the value of response in (result) in json file
+                const result = await response.json();
+                if(result.cod != 200){return result;}
+                return result;}
+                catch(e) {console.log(e.message);}
+    };
+
 /*===============generate button==================*/
-//stor the button in a varible so I can add to it an addEventListener on click
+
+//store the button in a varible so I can add to it an addEventListener on click
 const generate = document.getElementById('generate');
 //addEventListener on click
 generate.addEventListener("click", (event)=>{
     event.preventDefault();
     // stor the new url with the zip plus api key in a varible
     const URL = `${baseURI}${zip.value}${key}`;
-    console.log(URL)
+    getData(URL);
     });
   
 
