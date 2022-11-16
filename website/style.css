@@ -1,7 +1,7 @@
 body{
     background-color: #1d4049;
     /* for getting random weather background  from unsplash API */
-    /* background-image: url('https://source.unsplash.com/1600x900/?weather'); */
+    background-image: url('https://source.unsplash.com/1600x900/?weather');
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -68,14 +68,23 @@ input{
 }
 
 button{
-    width: 400px;
+    width: 250px;
     height: 100px;
-    background: #3b4a6b;
+    background: hsla(299, 90%, 58%, 0.493);
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
+    border-radius: 50px;
     box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+button:hover{
+    background: hsla(299, 95%, 69%, 0.66);
+}
+button:active{
+    background: hsla(336, 93%, 55%, 0.734);
 }
 h1{
     font-size: 36px;
