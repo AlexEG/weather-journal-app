@@ -9,18 +9,17 @@ const apiCall = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&
 let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
+
+
 /*============GET Request=====BUTTON========*/
 //stor the button in a varible so I can add to it an addEventListener on click
-const generate = document.getElementById("generate");
+const generate = document.getElementById('generate');
+const zip = document.getElementById('zip');
+const key = "&appid=127963487c6c5c760c53d9f994bc64f1&units=imperial";
+const baseURI = "https://api.openweathermap.org/data/2.5/weather?zip=";
+const feelings = document.getElementById('feelings');
 
 /*===============openweathermapp==================*/
 //addEventListener on click
-generate.addEventListener("click", async () => {
-  //restor the value of the input box to a varible
 
-  let zip = document.getElementById("zip").value;
-  let feelings = document.getElementById("feelings").value;
-
-  const response = await fetch(apiCall).then((res) => res.json());
-  console.log(response);
-});
+//restor the value of the input box to a varible
