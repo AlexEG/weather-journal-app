@@ -7,7 +7,7 @@ let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
 
 
-/*============GET Request=====BUTTON========*/
+/*============GET Request=============*/
 const feelings = document.getElementById('feelings');
 const temp = document.getElementById('temp');
 const zip = document.getElementById('zip');
@@ -26,8 +26,11 @@ const generate = document.getElementById('generate');
 //addEventListener on click
 generate.addEventListener("click", (event)=>{
     event.preventDefault();
-});
-
+    // stor the new url with the zip plus api key in a varible
+    const URL = `${baseURI}${zip.value}${key}`;
+    console.log(URL)
+    });
+  
 
 
 
